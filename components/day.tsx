@@ -1,5 +1,13 @@
 import { type ReactNode } from 'react'
 
+export type DateRenderProps = {
+  date: Date
+  currentDate: number | null
+  previousDate: number | null
+  nextDate: number | null
+  isToday: boolean
+}
+
 /**
  * A component container for date within month's view. Provides a render prop with the current date,
  * previous date, and next date.
@@ -14,7 +22,6 @@ import { type ReactNode } from 'react'
  * @example
  * ```tsx
  * <DateCellContainer
- *  startOfWeek='monday'
  *  cellIndex={0}
  *  date={new Date()}
  *  >
@@ -35,13 +42,7 @@ export const DateCellContainer = ({
   cellIndex,
   children,
 }: {
-  children: (dateRenderProps: {
-    date: Date
-    isToday: boolean
-    currentDate: number | null
-    previousDate?: number | null
-    nextDate?: number | null
-  }) => ReactNode
+  children: (dateRenderProps: DateRenderProps) => ReactNode
   cellIndex: number
   date: Date
   startOfWeek?: 'monday' | 'sunday'

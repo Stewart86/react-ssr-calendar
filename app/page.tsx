@@ -2,6 +2,7 @@ import { Version1 } from './_components/version1'
 import { Version2 } from './_components/version2'
 import { Version3 } from './_components/version3'
 import { Version4 } from './_components/version4'
+import { Version5 } from './_components/version5'
 
 // TODO:
 // * add navigation to month, year
@@ -29,6 +30,11 @@ export default function Home() {
         Highly customisable day view with events. Just by modifying DayElement
         component.
         <Version4 />
+      </div>
+      <div className='flex flex-col items-center gap-4'>
+        Highly customisable day view with events. Just by modifying DayElement
+        component.
+        <Version5 />
       </div>
     </main>
   )

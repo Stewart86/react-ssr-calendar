@@ -1,5 +1,5 @@
-export * from './calendar-container'
-export * from './calendar'
+export * from './month-view-container'
+export * from './month-view'
 export * from './month'
 export * from './week'
 export * from './day'

@@ -88,14 +88,7 @@ export const Version2 = () => {
               startOfWeek='sunday'
               cellIndex={cellIndex}
             >
-              {({ date, currentDate, previousDate, nextDate }) => (
-                <DayElement
-                  date={date}
-                  currentDate={currentDate}
-                  previousDate={previousDate}
-                  nextDate={nextDate}
-                />
-              )}
+              {(props) => <DayElement {...props} />}
             </DateCellContainer>
           )}
         </MonthView>
@@ -124,14 +117,7 @@ export const Version2 = () => {
               startOfWeek='sunday'
               cellIndex={cellIndex}
             >
-              {({ date, currentDate, previousDate, nextDate }) => (
-                <DayElement
-                  date={date}
-                  currentDate={currentDate}
-                  previousDate={previousDate}
-                  nextDate={nextDate}
-                />
-              )}
+              {(props) => <DayElement {...props} />}
             </DateCellContainer>
           )}
         </MonthView>

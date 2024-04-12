@@ -10,7 +10,6 @@ import {
   MonthView,
   MonthViewContainer,
   WeekdayHeader,
-  type DateRenderProps,
 } from '@/components'
 import { cn } from '@/lib/utils/cn'
 
@@ -31,7 +30,15 @@ const data: Record<string, string[]> = {
   '2024-06-22': ['Event 5'],
 }
 
-const DayElement = ({ currentDate, date, nextDate }: DateRenderProps) => {
+const DayElement = ({
+  currentDate,
+  date,
+  nextDate,
+}: {
+  currentDate: number | null
+  date: Date
+  nextDate?: number | null
+}) => {
   if (nextDate) {
     return <div />
   }
@@ -114,14 +121,12 @@ export const Version4 = () => {
             <DateCellContainer
               key={cellIndex}
               date={date}
-              startOfWeek='sunday'
               cellIndex={cellIndex}
             >
-              {({ date, currentDate, previousDate, nextDate }) => (
+              {({ date, currentDate, nextDate }) => (
                 <DayElement
                   date={date}
                   currentDate={currentDate}
-                  previousDate={previousDate}
                   nextDate={nextDate}
                 />
               )}

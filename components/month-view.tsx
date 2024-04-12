@@ -1,6 +1,6 @@
 import { Fragment, type ReactNode } from 'react'
 
-export type CalendarProps = {
+export type MonthViewProps = {
   children: (props: { cellIndex: number }) => ReactNode
 }
 
@@ -21,7 +21,7 @@ export type CalendarProps = {
  * </MonthView>
  *  ```
  */
-export const MonthView = ({ children }: CalendarProps) => (
+export const MonthView = ({ children }: MonthViewProps) => (
   <Fragment>
     {Array.from({ length: 42 }, (_, i) => children({ cellIndex: i }))}
   </Fragment>
