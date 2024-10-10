@@ -1,3 +1,4 @@
+import { GitHubGraph } from './_components/GitHubGraph'
 import { Version1 } from './_components/version1'
 import { Version2 } from './_components/version2'
 import { Version3 } from './_components/version3'
@@ -9,10 +10,15 @@ import { Version5 } from './_components/version5'
 // * highlight today
 // * add events
 // * inject initial data
+//
 
 export default function Home() {
   return (
     <main className='flex min-h-screen flex-col items-center gap-8 p-24'>
+      <div className='flex flex-col items-center gap-4'>
+        GitHub contribution graph clone. Server side rendered.
+        <GitHubGraph />
+      </div>
       <div className='flex flex-col items-center gap-4'>
         Most basic calendar. Just the days. Server side rendered.
         <Version1 />
